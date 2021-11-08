@@ -1,0 +1,19 @@
+.container {
+  background: #0f0f0f;
+  width: 350px;
+  height: 450px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  padding: 2em;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,14 +1,15 @@
 import { Login } from 'components/Login';
 import { Link } from 'react-router-dom';
+import '../styles/styles.css';
 
 export const LoginPage = () => {
     return (
-        <div>
-            <h1>Login</h1>
-            <Login/>
-            <p>
-                Or <Link to='/register' >register</Link>
-            </p>
+        <div className='container'>
+            <div className='heading'>Login</div>
+                <Login/>
+            <div className='text'>
+                Don't have an account? <Link to='/register' >Register</Link>
+            </div>
         </div>
     )
 }
