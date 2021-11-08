@@ -9,7 +9,7 @@ export const LoginPage = () => {
                 <Login/>
             <div className='text'>
                 Don't have an account? 
-                    <Link to='/register' >
+                    <Link to='/signup'>
                         <p>SignUp</p>
                     </Link>
             </div>

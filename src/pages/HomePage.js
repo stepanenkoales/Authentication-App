@@ -9,8 +9,8 @@ export const HomePage = () => {
     const { email } = useSelector(state => state.user);
     const isAuth = !!email;
     return isAuth ? (
-        <div>
-            <h1>Welcome</h1>
+        <div className='container'>
+            <div className='heading'>Welcome</div>
 
             <button className='loginBtn'
                 onClick={()=> dispatch(removeUser())}

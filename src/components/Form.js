@@ -8,21 +8,25 @@ export const Form = ({title, handleClick}) => {
     return (
         <>
             <div className='box'>
-                <p>email</p>               
-                <input
-                    value={email}
-                    placeholder='Enter your email'
-                    onChange={e => setEmail(e.target.value)}
-                />
+                <p>email</p> 
+                <div>             
+                    <input
+                        value={email}
+                        placeholder='Enter your email'
+                        onChange={e => setEmail(e.target.value)}
+                    />
+                </div> 
             </div>
             <div className='box'>
                 <p>password</p>
-                <input
-                    type='password'
-                    value={password}
-                    placeholder='Enter your password'
-                    onChange={e => setPassword(e.target.value)}              
-                />
+                <div>
+                    <input
+                        type='password'
+                        value={password}
+                        placeholder='Enter your password'
+                        onChange={e => setPassword(e.target.value)}              
+                    />
+                </div>
             </div>    
             <button className='loginBtn'
                 onClick={() => handleClick(email, password)}

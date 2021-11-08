@@ -1,12 +1,23 @@
-.container {
-    background: rgb(15, 15, 15);
-    width: 350px;
-    height: 450px;
-    border-radius: 20px;
+@mixin flex {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    color: white;
+}
+
+$backColor: #0f0f0f;
+$baseColor: #FFFFFF;
+$backInput: #131313; 
+$gradientFrom: #751a22; 
+$gradientTo: #ec7089;
+$boxShadow: #f8cfd9;
+
+.container {
+    @include flex;
+    background: $backColor;
+    width: 350px;
+    height: 450px;
+    border-radius: 20px;
+    color: $baseColor;
     padding: 2em;
 }
 .heading {
@@ -15,29 +26,48 @@
 }
 .box {
     margin: 0.2em 0;
+    p {
+        color: rgba($baseColor, 0.7);
+    }
+    div {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        margin: 0.5em 0;
+    }
+    input {
+        position: absolute;
+        background: rgb(19, 19, 19);
+        color: $baseColor;
+        padding-left: 0.8em;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: none;
+    }
 }
 .loginBtn {
-    //width: 102%;
     height: 40px;
     border: none;
     border-radius: 10px;
     margin: 0.5em 0;
-    cursor:pointer;
-    color: white;
-    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    cursor: pointer;
+    color: $baseColor;
+    background: linear-gradient(to right, $gradientFrom, $gradientTo);
 
     &:hover {
         transform: translate(-2%, 6%);
-        box-shadow: 0 0 10px #ff416d65;
+        box-shadow: 0 0 10px $boxShadow;
     }
 }
 .text {
     font-size: 0.8em;
     margin-top: 0.5em;
     text-align: center;
-    color: rgba($color: #dad1d3, $alpha: 0.623);
+    color: rgba($baseColor, $alpha: 0.6);
     
     p {
-        color: rgba($color: #dad1d3, $alpha: 1);
+        color: rgba($baseColor, $alpha: 0.95);
     }
 }
