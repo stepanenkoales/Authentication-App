@@ -4,11 +4,11 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { Form } from './Form';
 import { setUser } from 'store/userCreateSlice';
 
-export const Register = () => {
+export const SignUp = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const handleRegister = (email, password) => {
+    const handleSignUp = (email, password) => {
         const auth = getAuth();
         createUserWithEmailAndPassword(auth, email, password)
             .then(({user}) => {
@@ -20,13 +20,13 @@ export const Register = () => {
                 }));
                 navigate('/');
             })
-            .catch(() => alert('Invalid user!'))
+            .catch(() => alert('Invalid registration!'))
     }
 
     return (
         <Form
-            title='register'
-            handleClick={handleRegister}
+            title='SignUp'
+            handleClick={handleSignUp}
         />
     )
 }

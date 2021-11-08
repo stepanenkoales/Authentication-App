@@ -16,4 +16,42 @@
   color: white;
   padding: 2em;
 }
+
+.heading {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.box {
+  margin: 0.2em 0;
+}
+
+.loginBtn {
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  margin: 0.5em 0;
+  cursor: pointer;
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#ff416c), to(#ff4b2b));
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+}
+
+.loginBtn:hover {
+  -webkit-transform: translate(-2%, 6%);
+          transform: translate(-2%, 6%);
+  -webkit-box-shadow: 0 0 10px #ff416d65;
+          box-shadow: 0 0 10px #ff416d65;
+}
+
+.text {
+  font-size: 0.8em;
+  margin-top: 0.5em;
+  text-align: center;
+  color: rgba(218, 209, 211, 0.623);
+}
+
+.text p {
+  color: #dad1d3;
+}
 /*# sourceMappingURL=styles.css.map */

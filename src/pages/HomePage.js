@@ -2,6 +2,7 @@ import { Navigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { removeUser } from 'store/userCreateSlice';
 import { useSelector } from 'react-redux';
+import '../styles/styles.css';
 
 export const HomePage = () => {
     const dispatch = useDispatch();
@@ -11,7 +12,7 @@ export const HomePage = () => {
         <div>
             <h1>Welcome</h1>
 
-            <button
+            <button className='loginBtn'
                 onClick={()=> dispatch(removeUser())}
             >Log out from {email}</button>
         </div>

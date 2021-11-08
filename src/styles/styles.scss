@@ -8,5 +8,36 @@
     flex-direction: column;
     color: white;
     padding: 2em;
+}
+.heading {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+.box {
+    margin: 0.2em 0;
+}
+.loginBtn {
+    //width: 102%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    margin: 0.5em 0;
+    cursor:pointer;
+    color: white;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
 
+    &:hover {
+        transform: translate(-2%, 6%);
+        box-shadow: 0 0 10px #ff416d65;
+    }
+}
+.text {
+    font-size: 0.8em;
+    margin-top: 0.5em;
+    text-align: center;
+    color: rgba($color: #dad1d3, $alpha: 0.623);
+    
+    p {
+        color: rgba($color: #dad1d3, $alpha: 1);
+    }
 }
