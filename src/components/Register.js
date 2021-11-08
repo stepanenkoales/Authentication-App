@@ -1,18 +1,18 @@
 import { useDispatch } from 'react-redux';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { Form } from './Form';
 import { setUser } from 'store/userCreateSlice';
 
-export const Login = () => {
+export const Register = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    
-    const handleLogin = (email, password) => {
+
+    const handleRegister = (email, password) => {
         const auth = getAuth();
-        signInWithEmailAndPassword(auth, email, password)
+        createUserWithEmailAndPassword(auth, email, password)
             .then(({user}) => {
-               //  console.log(user);
+                //console.log(user);
                 dispatch(setUser({
                     email: user.email,
                     id: user.uid,
@@ -25,10 +25,8 @@ export const Login = () => {
 
     return (
         <Form
-            title='sign in'
-            handleClick={handleLogin}
+            title='register'
+            handleClick={handleRegister}
         />
     )
 }
-
-

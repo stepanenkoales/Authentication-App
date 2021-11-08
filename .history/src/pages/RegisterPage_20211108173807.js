@@ -6,6 +6,7 @@ export const RegisterPage = () => {
         <div>
             <h1>Register</h1>
             <Register />
+
             <p>
                 Already have an account? <Link to='/login' >Sign in</Link>
             </p>
