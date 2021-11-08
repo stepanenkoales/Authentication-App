@@ -9,4 +9,4 @@ React Hooks \
 React-Router v6 \
 Redux-Toolkit \
 Firebase \
-SASS 
+Sass 
