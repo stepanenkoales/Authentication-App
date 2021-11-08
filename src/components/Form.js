@@ -12,6 +12,7 @@ export const Form = ({title, handleClick}) => {
                 onChange={e => setEmail(e.target.value)}
             />
             <input
+                type='password'
                 value={password}
                 placeholder='password'
                 onChange={e => setPassword(e.target.value)}              

@@ -25,7 +25,7 @@ export const Login = () => {
 
     return (
         <Form
-            title='login'
+            title='Login'
             handleClick={handleLogin}
         />
     )
